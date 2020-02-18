@@ -9,13 +9,9 @@ Common and/or useful Git commands
 * git checkout [COMMIT_OR_BRANCH_OR_TAG] # checkout to a commit, branch, or tag 
 * git checkout origin/master # checkout to the previously fetch remote version of master 
 * git checkout -b branch-name # create a new branch and check it out at the same time
+* git checkout - # toggle between previous checked out branch 
+* git checkout -b MY_NEW_BRANCH origin/master # create new branch based on fetched remote master 
 
-#### Tags
-* git fetch --tags # Command 1 of 2
-* git tag # Command 2 of 2 to see all tags applied on remote
-* git tag -d [TAG_NAME] # Delete local tag 
-* git push origin :refs/tags/[TAG_NAME] # delete remote tag
-* git checkout -b [BRANCH_NAME] [TAG_NAME] # Create a new branch at a specific tag
 #### More on branches
 * git branch -m old-name new-name # rename a branch
 * git branch -d branch_name # delete a local branch
@@ -34,10 +30,6 @@ Common and/or useful Git commands
 * git merge origin/master  # merge the remote changes previously fetched  
 * git push origin HEAD # push your current branch to same name at remote 
 * git push origin branch-name # push a specific local branch (not current branch) at remote
-  
-#### Branches and checkouts
-* git checkout - # toggle between previous checked out branch 
-* git checkout -b MY_NEW_BRANCH origin/master # create new branch based on fetched remote master 
 
 ####  Differences, merging ancestors, rebase
 * git diff [COMMIT_OR_BRANCH1] [COMMIT_OR_BRANCH2] # compare differences 
@@ -46,9 +38,6 @@ Common and/or useful Git commands
 * git rebase --onto origin/master [COMMIT] # rebase current branch onto origin/master starting with COMMIT 
 * git rebase --onto BRANCH_OR_COMMIT1 --fork-point BRANCH_OR_COMMIT1 # determine ancestor and use it for rebase 
 * git rebase -i [COMMIT] # allows you to squash, reorder, or omit commits, along with updating commit messages 
-
-#### Bisect to iterate commits
-* git bisect [BAD_COMMIT] [GOOD_COMMIT] # helps you iterate through commits in binary search style to find problem 
 
 #### What's in a specific commit
 * git show COMMIT # show diff of what changed in this commit 
@@ -68,6 +57,16 @@ Common and/or useful Git commands
 * git reset --hard HEAD # reset changed files to what is in last commit 
 * git reset HEAD~1 # undo last commit, resetting files to status before the commit
 * git checkout filename # reset a single file 
+
+#### Tags
+* git fetch --tags # Command 1 of 2
+* git tag # Command 2 of 2 to see all tags applied on remote
+* git tag -d [TAG_NAME] # Delete local tag 
+* git push origin :refs/tags/[TAG_NAME] # delete remote tag
+* git checkout -b [BRANCH_NAME] [TAG_NAME] # Create a new branch at a specific tag
+
+#### Bisect to iterate commits
+* git bisect [BAD_COMMIT] [GOOD_COMMIT] # helps you iterate through commits in binary search style to find problem 
 
 #### Merge changes from a specific commit into your current branch
 * git cherry-pick [COMMIT] # apply just the changes in this commit to your current local branch 
