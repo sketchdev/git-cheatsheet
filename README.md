@@ -11,9 +11,9 @@ git branch -a
 ```
 
 #### Checkout a branch/commit/tag from local or another host
-```
+```console
 # checkout to a commit, branch, or tag
-git checkout [COMMIT_OR_BRANCH_OR_TAG] 
+$ git checkout [COMMIT_OR_BRANCH_OR_TAG] 
 
 # checkout to the previously fetch remote version of master
 git checkout origin/master  
