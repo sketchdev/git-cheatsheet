@@ -2,15 +2,31 @@
 Common and/or useful Git commands
 
 #### Info on branches
-* git branch --merged # see branches that have been merged and can be cleaned up 
-* git branch -a # see all branches local and remote 
+```
+# see branches that have been merged and can be cleaned up 
+git branch --merged 
+
+# see all branches local and remote 
+git branch -a 
+```
 
 #### Checkout a branch/commit/tag from local or another host
-* git checkout [COMMIT_OR_BRANCH_OR_TAG] # checkout to a commit, branch, or tag 
-* git checkout origin/master # checkout to the previously fetch remote version of master 
-* git checkout -b branch-name # create a new branch and check it out at the same time
-* git checkout - # toggle between previous checked out branch 
-* git checkout -b MY_NEW_BRANCH origin/master # create new branch based on fetched remote master 
+```
+# checkout to a commit, branch, or tag
+git checkout [COMMIT_OR_BRANCH_OR_TAG] 
+
+# checkout to the previously fetch remote version of master
+git checkout origin/master  
+
+# create a new branch and check it out at the same time
+git checkout -b branch-name 
+
+# toggle between previous checked out branch
+git checkout -  
+
+# create new branch based on fetched remote master 
+git checkout -b MY_NEW_BRANCH origin/master 
+```
 
 #### More on branches
 * git branch -m old-name new-name # rename a branch
