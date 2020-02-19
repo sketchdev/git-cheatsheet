@@ -2,9 +2,9 @@
 Common and/or useful Git commands
 
 #### Info on branches
-```
+```bash
 # see branches that have been merged and can be cleaned up 
-git branch --merged 
+$ git branch --merged 
 
 # see all branches local and remote 
 git branch -a 
