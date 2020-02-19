@@ -29,7 +29,7 @@ git checkout -b MY_NEW_BRANCH origin/master
 ```
 
 #### More on branches
-```bash, console
+```shell
 # rename a branch
 $ git branch -m old-name new-name 
 
