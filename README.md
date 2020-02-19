@@ -29,10 +29,19 @@ git checkout -b MY_NEW_BRANCH origin/master
 ```
 
 #### More on branches
-* git branch -m old-name new-name # rename a branch
-* git branch -d branch_name # delete a local branch
-* git branch -D branch_name # force delete a local branch (make sure you want to delete it)
-* git push origin --delete branch_name # delete a remote branch
+```bash, console
+# rename a branch
+$ git branch -m old-name new-name 
+
+# delete a local branch
+git branch -d branch_name 
+
+# force delete a local branch (make sure you want to delete it)
+git branch -D branch_name 
+
+# delete a remote branch
+git push origin --delete branch_name 
+```
 
 #### Committing your changes to your current local branch
 * git add my_new_file.txt # add a new file; must do this before commit
