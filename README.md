@@ -84,6 +84,9 @@ $ git diff [COMMIT_OR_BRANCH1] [COMMIT_OR_BRANCH2]
 # compare current local branch with remote BRANCH_NAME  
 $ git diff origin/[BRANCH_NAME] 
 
+# Compare changes in locally modified file to last commit (in current local branch)
+$ git diff -- myfile.xyz
+
 # find common ancestor
 $ git merge-base BRANCH1 BRANCH2  
 
